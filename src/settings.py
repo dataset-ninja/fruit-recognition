@@ -14,7 +14,7 @@ from dataset_tools.templates import (
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "Fruit Recognition"
-PROJECT_NAME_FULL: str = "Fruit Recognition"
+PROJECT_NAME_FULL: str = "Fruit Recognition Dataset"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
@@ -22,7 +22,7 @@ HIDE_DATASET = True  # set False when 100% sure about repo quality
 ##################################
 LICENSE: License = License.CC_BY_4_0()
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Food(), Industry.Retail()]
-CATEGORY: Category = Category.Food()
+CATEGORY: Category = Category.Food(extra=Category.Retail())
 
 CV_TASKS: List[CVTask] = [CVTask.Classification()]
 ANNOTATION_TYPES: List[AnnotationType] = []
