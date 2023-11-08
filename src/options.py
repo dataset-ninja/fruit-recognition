@@ -1,3 +1,5 @@
+from typing import List
+
 from dataset_tools.templates import AnnotationType
 from src.settings import ANNOTATION_TYPES
 
@@ -10,7 +12,7 @@ SAMPLE_RATE = 1  # make less if dataset is too big
 # * Preview class to visualize in SUMMARY.md overview section
 # * Literal["ClassesPreview", "HorizontalGrid", "SideAnnotationsGrid", "Poster", "HorizontalGridAnimated", "VerticalGridAnimated"]
 # * If None, then preview_class will be set automatically to "ClassesPreview"
-PREVIEW_CLASS = "Poster"
+PREVIEW_CLASS = "ClassesPreview"
 
 IS_DETECTION_TASK: bool = None  # ? Set True if you want to visualize only bbox annotations
 if IS_DETECTION_TASK is None:
@@ -58,6 +60,23 @@ CLASSES_PREVIEW_ROW_HEIGHT: int = None
 CLASSES_PREVIEW_PADDINGS: dict = None
 CLASSES_PREVIEW_ROWS: int = None
 CLASSES_PREVIEW_GAP: int = None
+CLASSES_PREVIEW_TAGS: List[str] = [
+        "apple",
+        "banana",
+        "carambola",
+        "guava",
+        "kiwi",
+        "mango",
+        "muskmelon",
+        "orange",
+        "peach",
+        "pear",
+        "persimmon",
+        "pitaya",
+        "plum",
+        "pomegranate",
+        "tomatoes",
+    ]
 # default {"top": "10%", "bottom": "10%", "left": "10%", "right": "10%"}
 # set % or px as string values (e.i. "10%" or "10px")
 ###############################################################
@@ -87,6 +106,7 @@ def get_visualization_options():
         "Poster": {
             "title": POSTER_TITLE,
             "is_detection_task": POSTER_IS_DETECTION_TASK,
+            "num_classes": None if CLASSES_PREVIEW_TAGS is None else len(CLASSES_PREVIEW_TAGS),
         },
         "HorizontalGrid": {
             "rows": HORIZONTAL_GRID_ROWS,
@@ -125,6 +145,7 @@ def get_stats_options():
             "pad": CLASSES_PREVIEW_PADDINGS,
             "rows": CLASSES_PREVIEW_ROWS,
             "gap": CLASSES_PREVIEW_GAP,
+            "tags": CLASSES_PREVIEW_TAGS,
         },
         "ClassesHeatmaps": {
             "draw_style": DRAW_STYLE,
