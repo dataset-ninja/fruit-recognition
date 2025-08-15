@@ -1,6 +1,6 @@
 Dataset **Fruit Recognition** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/remote/eyJsaW5rIjogImZzOi8vYXNzZXRzLzE5NDJfRnJ1aXQgUmVjb2duaXRpb24vZnJ1aXQtcmVjb2duaXRpb24tRGF0YXNldE5pbmphLnRhciIsICJzaWciOiAiaFVFWUk0alp2NjIrY0lHa0hKdy9DeSsxTmFNOVMvVTRMdmpQTzZIS2FnST0ifQ==)
+ [Download](https://assets.supervisely.com/remote/eyJsaW5rIjogInMzOi8vc3VwZXJ2aXNlbHktZGF0YXNldHMvMTk0Ml9GcnVpdCBSZWNvZ25pdGlvbi9mcnVpdC1yZWNvZ25pdGlvbi1EYXRhc2V0TmluamEudGFyIiwgInNpZyI6ICJTdWIxRmJqdU1FczFreFVESEIwbnp4azNPMmQ5bXdXVWxkUi9vNGhoN1hFPSJ9?response-content-disposition=attachment%3B%20filename%3D%22fruit-recognition-DatasetNinja.tar%22)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
